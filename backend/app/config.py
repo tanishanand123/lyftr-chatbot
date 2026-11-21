@@ -8,7 +8,7 @@ def _split_csv(value: str) -> list[str]:
 class Settings:
     def __init__(self):
         self.llm_api_keys: list[str] = _split_csv(os.getenv("LLM_API_KEYS", ""))
-        self.llm_model: str = os.getenv("LLM_MODEL", "gemini/gemini-2.0-flash")
+        self.llm_model: str = os.getenv("LLM_MODEL", "groq/openai/gpt-oss-20b")
         self.database_url: str = os.getenv("DATABASE_URL", "sqlite:///./data/app.db")
         self.allowed_origins: list[str] = _split_csv(os.getenv("ALLOWED_ORIGINS", "*"))
         self.enable_failure_simulation: bool = os.getenv(

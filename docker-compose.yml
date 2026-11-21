@@ -6,7 +6,7 @@ services:
       - "8000:8000"
     environment:
       - LLM_API_KEYS=${LLM_API_KEYS}
-      - LLM_MODEL=${LLM_MODEL:-gemini/gemini-2.0-flash}
+      - LLM_MODEL=${LLM_MODEL:-groq/openai/gpt-oss-20b}
       - DATABASE_URL=sqlite:////data/app.db
       - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-http://localhost:3000}
       - ENABLE_FAILURE_SIMULATION=${ENABLE_FAILURE_SIMULATION:-true}
